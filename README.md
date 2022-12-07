@@ -1,3 +1,3 @@
-# SinglePrice-GridComponent-FrontendMentor
+# Huddle-Landing-FrontendMentor
 
-### 🚀 [SinglePrice-GridComponent-FrontendMentor](https://kevencb.github.io/Single-Price-Grid-Component/)
+### 🚀 [Huddle-Landing-FrontendMentor](https://kevencb.github.io/Huddle-Landing-FrontendMentor/)
