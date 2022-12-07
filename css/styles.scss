@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap');
+
+$Violet: hsl(257, 40%, 49%);
+$SoftMagenta: hsl(300, 69%, 71%);
+$Magenta: #FF52C1;
+$TitleFont: 'Poppins', sans-serif;
+$BodyFont: 'Open Sans', sans-serif;
+$White: #fff;
+
+*, ::after, ::before{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    background-color: $Violet;
+    background-image: url('../images/bg-mobile.svg');
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    font-family: $BodyFont;
+    font-size: 1.6rem;
+}
+@media (min-width: 768px) {
+    body{
+        background-image: url('../images/bg-desktop.svg');
+        background-position: left;
+        background-size: auto 110%;
+    }
+}
+
+.container{
+    margin: 0 auto;
+    max-width: 128rem;
+    overflow: hidden;
+    padding: 3.6rem;
+    width: 100%;
+}
+
+.main{
+    display: grid;
+    margin-top: 4rem;
+    padding-top: 0;
+    .logo{
+        grid-column: 1/-1;
+        margin-bottom: 7rem;
+        width: 12rem;
+        img{
+            width: 100%;
+        }
+    }
+    .poster{
+        img{
+            width: 100%;
+        }
+    }
+    .info{
+        color: $White;
+        margin: 6rem 0;
+        &__title{
+            font-family: $TitleFont;
+            font-size: 2.4rem;
+            font-weight: 600;
+            line-height: 3.6rem;
+            margin-bottom: 2.4rem;
+            text-align: center;
+        }
+        &__text{
+            font-weight: 400;
+            line-height: 2.4rem;
+            text-align: center;
+        }
+        &__register{
+            border: none;
+            border-radius: 50rem;
+            box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.2);
+            color: $Violet;
+            cursor: pointer;
+            display: block;
+            font-family: $TitleFont;
+            font-size: 1.2rem;
+            height: 4rem;
+            margin: 3.2rem auto;
+            width: 20rem;
+        }
+        &__register:hover{
+            background-color: $SoftMagenta;
+            color: $White;
+        }
+    }
+    .social-network{
+        display: flex;
+        gap: 1rem;
+        justify-content: center;
+        margin: 0 auto;
+        .icon-social{
+            border: 1px solid $White;
+            border-radius: 50%;
+            color: $White;
+            font-size: 1.4rem;
+            height: 2.8rem;
+            line-height: 2.6rem;
+            text-align: center;
+            width: 2.8rem;
+        }
+        .icon-social:hover{
+            border: 1px solid $Magenta;
+            color: $Magenta;
+        }
+    }
+}
+
+@media (min-width: 768px){
+    .main{
+        align-content: center;
+        column-gap: 4rem;
+        grid-template-columns: 65rem 1fr;
+        grid-template-rows: repeat(3, max-content);
+        height: calc(100vh - 12rem);
+        margin-top: 4.8rem;
+        .logo{
+            grid-column: 1/-1;
+            width: 20rem;
+            img{
+                width: 100%;
+            }
+        }
+        .poster{
+            grid-column: 1/2;
+            img{
+                width: 100%;
+            }
+        }
+        .info{
+            text-align: left;
+            &__title{
+                font-size: 4rem;
+                line-height: 6rem;
+                margin-bottom: 2.4rem;
+                text-align: left;
+            }
+            &__text{
+                font-size: 1.8rem;
+                line-height: 2.7rem;
+                text-align: left;
+            }
+            &__register{
+                font-size: 1.8rem;
+                height: 5.6rem;
+                margin: 3.2rem 0;
+            }
+            &__register:hover{
+                background-color: $SoftMagenta;
+                color: $White;
+            }
+        }
+        .social-network{
+            gap: 1.6rem;
+            grid-column: 2/3;
+            justify-content:flex-end;
+            width: 100%;
+            .icon-social{
+                font-size: 1.8rem;
+                height: 4rem;
+                line-height: 3.6rem;
+                width: 4rem;
+            }
+        }
+    }
+}
+
+footer{
+    align-items: center;
+    color: $White;
+    display: flex;
+    font-size: 1rem;
+    height: 6rem;
+    justify-content: center;
+    a{
+        color: $White;
+    }
+}
